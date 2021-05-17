@@ -23,8 +23,15 @@ public class Calculator {
 		return i * j;
 	}
 
-	public static double divCalc(double i, double j) {
-		return i / j;
+	public static String divCalc(int i, int j) {
+		if(i < j) {
+			double res = i/j;
+			String msg = "The result is "+res;
+			return msg;
+		} else {
+			String msg = "The division can't be performed";
+			return msg;
+		}
 
 	}
 
