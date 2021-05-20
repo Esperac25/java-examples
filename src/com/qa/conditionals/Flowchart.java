@@ -1,12 +1,7 @@
-package com.qa.java;
+package com.qa.conditionals;
 
 public class Flowchart {
 
-	public static void main(String[] args) {
-		System.out.println(mult(1,2, true));
-		chart(10);
-
-	}
 	public static int mult(int i, int j, boolean B) {
 		if(B == false) {
 			return Calculator.multiCalc(i, j);
@@ -14,6 +9,7 @@ public class Flowchart {
 			return Calculator.addCalc(i, j);
 		}
 	}
+	
 	public static String chart(int i) {
 		if(i > 2000) {
 			System.out.println("A");
@@ -48,7 +44,4 @@ public class Flowchart {
 		
 		return "End";
 	}
-	
-	
-
 }
