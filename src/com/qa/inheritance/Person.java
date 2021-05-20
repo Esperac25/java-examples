@@ -1,4 +1,4 @@
-package com.qa.constructors;
+package com.qa.inheritance;
 
 
 public class Person {
