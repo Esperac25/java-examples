@@ -1,11 +1,7 @@
-package com.qa.java;
+package com.qa.conditionals;
 
 public class FizzBuzz {
 
-	public static void main(String[] args) {
-		fizzBuzz(6);
-
-	}
 	public static String fizzBuzz(int i) {
 		if(i % 3 == 0 && i % 5 == 0) {
 			String msg = "FizzBuzz";

@@ -1,13 +1,7 @@
-package com.qa.java;
+package com.qa.conditionals;
 
 public class BlackJack {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		greeting();
-		startGame(20,2);
-
-	}
 	public static String greeting() {
 		String msg = "Hello and welcome to BlackJack, let's play!";
 		System.out.println(msg);

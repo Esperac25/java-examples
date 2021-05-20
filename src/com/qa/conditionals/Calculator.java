@@ -1,14 +1,7 @@
-package com.qa.java;
+package com.qa.conditionals;
 
 
 public class Calculator {
-
-	public static void main(String[] args) {
-		System.out.println(addCalc(5,9));
-		System.out.println(subCalc(5,10));
-		System.out.println(multiCalc(20,30));
-		System.out.println(divCalc(3,290));
-	}
 
 	public static int addCalc(int i, int j) {
 		return i + j;

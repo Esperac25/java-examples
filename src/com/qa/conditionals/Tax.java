@@ -1,11 +1,7 @@
-package com.qa.java;
+package com.qa.conditionals;
 
-public class Taxes {
+public class Tax {
 	
-	public static void main(String[] args) {
-		System.out.println(tax(15000.00));
-		System.out.println(amountTaxed(15000.00));
-	}
 	public static double tax(double i) {
 		if(i <= 14999) {
 		    return .0;
