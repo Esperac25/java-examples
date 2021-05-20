@@ -1,11 +1,12 @@
 package com.qa.constructors;
 
+
 public class Person {
-	public String name; //
-	public int age; //
-	public String gender; //
-	public boolean isBreathing;
-	public int walkSpeed = 30; // in feet
+	private String name; //
+	private int age; //
+	private String gender; //
+	private boolean isBreathing;
+	private int walkSpeed; // in feet
 // Constructor
 
 	public Person(String name, int age, String gender) {
@@ -14,19 +15,43 @@ public class Person {
 		this.gender = gender;
 	}
 
-	public void read() {
-		System.out.println(this.name + " is reading the book titled: {given}");
+	public void read(String a) {
+		System.out.println(this.name + " is reading the book titled: "+a);
 	}
-
-	public boolean isStillBreathing() {
+	public String getName() {
+		return name;
+	}
+	public void setName(String n) {
+		this.name = n;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int a) {
+		this.age = a;
+	}
+	public void setGender(String gen) {
+		this.gender = gen;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public boolean getIsStillBreathing() {
 		return isBreathing;
+	}
+	public void setIsStillBreathing(boolean b) {
+		this.isBreathing = b;
+	}
+	public int getWalk() {
+		return walkSpeed;
+	}
+	public void setWalk(int w) {
+		this.walkSpeed = w;
 	}
 
 	public String speak(String msg) {
 		return this.name + " says: " + msg;
 	}
 
-	public int walk() {
-		return walkSpeed;
-	}
+	
 }

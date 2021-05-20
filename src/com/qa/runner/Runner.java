@@ -17,12 +17,17 @@ public class Runner {
 		ForLoop1.cubeOrSquare(int1);
 		System.out.println(TwoString.strCount("What is the word count of this string?"));
 		
-		Person joe = new Person("Joe", 26, "male");
-		joe.read();
+		Person esperanza = new Person("Esperanza", 26, "female");
+		Book theMakeBelieve = new Book("The Make Believe", "unknown", "non-fiction", 200, 50, false);
 		
-		Book aBook = new Book("A Book", "Joe", "Fiction", 100, 20);
-		aBook.overview();
-		aBook.cost();
+		
+		System.out.println(esperanza.speak("Hello, nice to meet you!"));
+		esperanza.setName("Mia");
+		esperanza.setName("Esperanza");
+		System.out.println(esperanza.getName());
+		esperanza.read(theMakeBelieve.getTitle());
+		theMakeBelieve.overview();
+		
 	}
 
 }
