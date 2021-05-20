@@ -18,7 +18,8 @@ import com.qa.abstraction.Vehicle;
 //import com.qa.constructors.Book;
 
 public class Runner {
-	public static int[] int1= {1,2,3,4,5};
+	public static int[] int1 = { 1, 2, 3, 4, 5 };
+
 	public static void main(String[] args) {
 //		System.out.println("Hello World");
 //		System.out.println(Calculator.addCalc(2, 3));
@@ -49,15 +50,17 @@ public class Runner {
 //		System.out.println(employee.calculateWeeklySalary());
 //		employee.employeeDetails();
 //		trainee.traineeDetails();
-		Car nissan = new Car("Nissan Sentra", 2008, "Toyota", "blue", 8000);
-		Motorcycle harley = new Motorcycle("Harley", 2002, "Harley Davidson", false, "red");
+		Car nissan = new Car(1, "Nissan Sentra", 2008, "Toyota", "Car", "blue", 8000);
+		Motorcycle harley = new Motorcycle(2, "Harley", 2002, "Harley Davidson", "Motorcycle", false, "red");
 		List<Vehicle> vehicleList = new ArrayList<Vehicle>();
 		Garage myGarage = new Garage(vehicleList);
-		
+
 		myGarage.addVehicle(nissan);
 		myGarage.addVehicle(harley);
 		System.out.println(myGarage.viewList());
-		
+		myGarage.fixVehicle(harley);
+		myGarage.closeUpShop(vehicleList);
+		System.out.println(myGarage.viewList());
 	}
 
 }
