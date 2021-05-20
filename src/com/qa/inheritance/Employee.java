@@ -26,5 +26,10 @@ public class Employee extends Person{
 	public void setWeeklySalary(double i) {
 		this.weeklySalary = i;
 	}
+	public void employeeDetails() {
+	    System.out.println(super.name+ ", " + super.age + ", " + super.gender + ", " + this.getWeeklySalary() + ", " + getAnnualSalary());
+	    
+	  }
 }
+
 	

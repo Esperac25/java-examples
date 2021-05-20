@@ -1,11 +1,19 @@
 package com.qa.runner;
 
-//import com.qa.conditionals.BlackJack;
-//import com.qa.conditionals.Calculator;
-//import com.qa.enhancedforloops.ForLoop1;
-import com.qa.inheritance.Person;
-import com.qa.inheritance.Trainee;
-import com.qa.inheritance.Employee;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.qa.abstraction.Car;
+import com.qa.abstraction.Garage;
+import com.qa.abstraction.Motorcycle;
+import com.qa.abstraction.Vehicle;
+
+////import com.qa.conditionals.BlackJack;
+////import com.qa.conditionals.Calculator;
+////import com.qa.enhancedforloops.ForLoop1;
+//import com.qa.inheritance.Person;
+//import com.qa.inheritance.Trainee;
+//import com.qa.inheritance.Employee;
 //import com.qa.strings.TwoString;
 //import com.qa.constructors.Book;
 
@@ -30,15 +38,26 @@ public class Runner {
 //		System.out.println(esperanza.getName());
 //		esperanza.read(theMakeBelieve.getTitle());
 //		theMakeBelieve.overview();
-		Person esperanza = new Person("Esperanza", 26, "female");
-		Trainee trainee = new Trainee(esperanza.getName(), esperanza.getAge(), esperanza.getGender(), 10000);
-		Employee employee = new Employee(esperanza.getName(), esperanza.getAge(), esperanza.getGender(), 80000);
-		System.out.println(trainee.getBursary());
+//		Person esperanza = new Person("Esperanza", 26, "female");
+//		Trainee trainee = new Trainee(esperanza.getName(), esperanza.getAge(), esperanza.getGender(), 10000);
+//		Employee employee = new Employee(esperanza.getName(), esperanza.getAge(), esperanza.getGender(), 80000);
+//		System.out.println(trainee.getBursary());
+//		
+//		trainee.addSubject("chemistry");
+//		trainee.addSubject("computer-programming");
+//		System.out.println(trainee.getSubjectsLearned());
+//		System.out.println(employee.calculateWeeklySalary());
+//		employee.employeeDetails();
+//		trainee.traineeDetails();
+		Car nissan = new Car("Nissan Sentra", 2008, "Toyota", "blue", 8000);
+		Motorcycle harley = new Motorcycle("Harley", 2002, "Harley Davidson", false, "red");
+		List<Vehicle> vehicleList = new ArrayList<Vehicle>();
+		Garage myGarage = new Garage(vehicleList);
 		
-		trainee.addSubject("chemistry");
-		trainee.addSubject("computer-programming");
-		System.out.println(trainee.getSubjectsLearned());
-		System.out.println(employee.calculateWeeklySalary());
+		myGarage.addVehicle(nissan);
+		myGarage.addVehicle(harley);
+		System.out.println(myGarage.viewList());
+		
 	}
 
 }

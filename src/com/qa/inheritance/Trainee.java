@@ -26,6 +26,10 @@ public class Trainee extends Person{
 	public void addSubject(String i) {
 		this.subjectsLearned.add(i);
 	}
+	public void traineeDetails() {
+	    System.out.println(super.name+ ", " + super.age + ", " + super.gender + ", " + this.getBursary() + ", " + getSubjectsLearned());
+	    
+	  }
 	
 }
 
