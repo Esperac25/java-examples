@@ -1,14 +1,15 @@
 package com.qa.abstraction;
 
 public class Vehicle {
+	protected static int count = 0;
 	protected int id;
 	protected String model;
 	protected int year;
 	protected String manufacturer;
 	protected String type;
 
-	public Vehicle(int id, String model, int year, String manufacturer, String type) {
-		this.id = id;
+	public Vehicle(String model, int year, String manufacturer, String type) {
+		this.id = ++count;
 		this.model = model;
 		this.year = year;
 		this.manufacturer = manufacturer;
@@ -17,10 +18,6 @@ public class Vehicle {
 
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int i) {
-		this.id = i;
 	}
 
 	public String getType() {
@@ -53,6 +50,12 @@ public class Vehicle {
 
 	public void setManufacturer(String m) {
 		this.manufacturer = m;
+	}
+
+	@Override
+	public String toString() {
+		return "Vehicle [id=" + id + ", model=" + model + ", year=" + year + ", manufacturer=" + manufacturer
+				+ ", type=" + type + "]";
 	}
 
 }

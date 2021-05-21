@@ -13,6 +13,19 @@ public class Garage {
 	public void removeVehicle(Vehicle v) {
 		this.vehicleList.remove(v);
 	}
+	public String removeById(int id) {
+		for(int i = 0; i < vehicleList.size(); i++) {
+			if(vehicleList.get(i).getId() == id) {
+				vehicleList.remove(id);
+				return "Vehicle with Id: "+ id + " was successfully removed";
+			}
+		}
+		return "Vehicle with Id: " + id + " was not found";
+	}
+	@SuppressWarnings("unlikely-arg-type")
+	public void removeByType(Vehicle v) {
+		this.vehicleList.remove(v.getType());
+	}
 	public List<Vehicle> viewList() {
 		return vehicleList;
 	}
@@ -20,6 +33,8 @@ public class Garage {
 		int bill = 0;
 		if(v.type == "Car") {
 			bill += 200;
+		} else if (v.type == "Helicopter"){
+			bill += 10000;
 		} else {
 			bill += 100;
 		}
