@@ -1,6 +1,6 @@
 package com.qa.abstraction;
 
-public class Vehicle {
+public abstract class Vehicle {
 	protected static int count = 0;
 	protected int id;
 	protected String model;
