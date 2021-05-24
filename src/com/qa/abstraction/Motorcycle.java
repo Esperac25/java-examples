@@ -4,9 +4,9 @@ public class Motorcycle extends Vehicle {
 	protected boolean isRunning;
 	protected String color;
 
-	public Motorcycle(int id, String model, int year, String manufacturer, String type, boolean isRunning,
+	public Motorcycle(String model, int year, String manufacturer, String type, boolean isRunning,
 			String color) {
-		super(id, model, year, manufacturer, type);
+		super(model, year, manufacturer, type);
 		this.isRunning = isRunning;
 		this.color = color;
 	}
@@ -29,8 +29,10 @@ public class Motorcycle extends Vehicle {
 
 	@Override
 	public String toString() {
-		return ("ID: " + this.id + "\n" + "Type: " + this.type + "\n" + "Model: " + this.model + "\n" + "Year: "
-				+ this.year + "\n" + "Manufacturer: " + this.manufacturer + "\n" + "Engine Running: "
-				+ this.getIsRunning() + "\n" + "Color: " + this.color + "\n");
+		return "Motorcycle [isRunning=" + isRunning + ", color=" + color + ", getId()=" + getId() + ", getType()="
+				+ getType() + ", getmodel()=" + getmodel() + ", getYear()=" + getYear() + ", getManufacturer()="
+				+ getManufacturer() + "]";
 	}
+	
+	
 }

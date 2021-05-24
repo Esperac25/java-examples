@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.qa.abstraction.Car;
 import com.qa.abstraction.Garage;
+import com.qa.abstraction.Helicopter;
 import com.qa.abstraction.Motorcycle;
 import com.qa.abstraction.Vehicle;
 
@@ -50,17 +51,21 @@ public class Runner {
 //		System.out.println(employee.calculateWeeklySalary());
 //		employee.employeeDetails();
 //		trainee.traineeDetails();
-		Car nissan = new Car(1, "Nissan Sentra", 2008, "Toyota", "Car", "blue", 8000);
-		Motorcycle harley = new Motorcycle(2, "Harley", 2002, "Harley Davidson", "Motorcycle", false, "red");
+		Car nissan = new Car("Nissan Sentra", 2008, "Toyota", "Car", "blue", 8000);
+		Motorcycle harley = new Motorcycle("Harley", 2002, "Harley Davidson", "Motorcycle", false, "red");
+		Helicopter helli = new Helicopter("Helli", 2015, "Esperanza Cardenas", "Helicopter", false);
 		List<Vehicle> vehicleList = new ArrayList<Vehicle>();
 		Garage myGarage = new Garage(vehicleList);
 
 		myGarage.addVehicle(nissan);
 		myGarage.addVehicle(harley);
-		System.out.println(myGarage.viewList());
-		myGarage.fixVehicle(harley);
-		myGarage.closeUpShop(vehicleList);
-		System.out.println(myGarage.viewList());
+		myGarage.addVehicle(helli);
+//		System.out.println(myGarage.viewList());
+//		myGarage.fixVehicle(harley);
+////		myGarage.closeUpShop(vehicleList);
+//		myGarage.removeById(harley.getId());
+		System.out.println(myGarage.removeById(0));
+//		System.out.println(myGarage.viewList());
 	}
 
 }
