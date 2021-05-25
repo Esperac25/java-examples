@@ -1,1 +1,1 @@
-# java-examples
+# Java-examples for QA Training
